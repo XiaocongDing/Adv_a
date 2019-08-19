@@ -123,7 +123,7 @@ import pickle
 for u in range(0,22,2):
     u = u/10;
     for ratio in range(4,24,4):
-        for perturbation in range(4,5):
+        for perturbation in range(8,9):
             count=0
             success = 0;  # 作为成功样本的计数
             unsuccess = 0;
@@ -149,7 +149,7 @@ for u in range(0,22,2):
                 #参数设置
                 demo_epsilon = perturbation / 255.0  # a really small perturbation
                 demo_lr = 1e-1
-                demo_steps = 30
+                demo_steps = 32
                 demo_target = vecdict[filename] [1] # "guacamole"  没有目标的攻击目标就是自己，loss取反从而变大
                 demo_target = int(demo_target)
                 demo_target -= 1
